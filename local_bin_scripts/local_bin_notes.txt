@@ -1,0 +1,3 @@
+Local Bin:
+----------
+Copy these scripts to $HOME/.local/bin

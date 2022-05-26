@@ -7,6 +7,15 @@ File manager:
 -------------
 Nautilus. Download lxappearance and you can customize gtk3 apps from there
 
+Data Drive:
+-----------
+udisksctl mount -b /dev/<driveName>
+udisksctl unmount -b /dev/<driveName>
+OR
+mountext
+unmountext
+Scripts located in local_bin_scripts
+
 Polybar:
 --------
 Kept it simple. Used adobe-source-han-sans-jp-fonts for the Japanese font and
