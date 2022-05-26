@@ -1,0 +1,3 @@
+Icons:
+------
+Move this folder into $HOME/.icons

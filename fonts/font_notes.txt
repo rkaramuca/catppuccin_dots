@@ -1,0 +1,8 @@
+Fonts:
+------
+Fonts are stored in $HOME/.fonts
+Use xorg-xdf package to view glyphs:
+xfd -fa <FontName>
+Then, click on a glyph and look at its unicode value.
+Then, in a terminal, type echo -e "\u<unicode>".
+Copy paste the glyph into polybar!

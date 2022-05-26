@@ -1,0 +1,3 @@
+Screen:
+-------
+Move this script into $HOME/.screen_layout

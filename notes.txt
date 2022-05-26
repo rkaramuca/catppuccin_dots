@@ -1,0 +1,20 @@
+System Installs:
+----------------
+We install nvim, vimplug, zsh, ohmyzsh, and 
+zsh-syntaxhighlighting/zsh-autosuggestions to setup our terminal.
+
+File manager:
+-------------
+Nautilus. Download lxappearance and you can customize gtk3 apps from there
+
+Polybar:
+--------
+Kept it simple. Used adobe-source-han-sans-jp-fonts for the Japanese font and
+waffle (located in .fonts) for the glyphs.
+
+System Theme:
+-------------
+Used the Catppuccin theme. Their GitHub repo has a lot of style guides and 
+theming for a lot of apps.
+
+** There is more specific guides in some of the directories **
