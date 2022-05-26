@@ -1,7 +1,6 @@
 #! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-killall -q polybar
 
 # on-boot programs
 $HOME/.screen_layout/external.sh
@@ -11,18 +10,22 @@ xset -dpms
 nitrogen --restore &
 picom -m 1 -i 1 &
 xsetroot -cursor_name left_ptr
+xset +fp /home/ron/.local/share/fonts
+xset fp rehash 
 
 # monitor and polybar settings
 bspc wm --reorder-monitors DP-1 HDMI-0
 bspc monitor DP-1 -d 1 3 5
 bspc monitor HDMI-0 -d 2 4 6
+killall -q polybar
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 polybar main &
 polybar secondary &
 
 # colors
 bspc config normal_border_color     '#575268'
-bspc config active_border_color     '#d9e0ee'
-bspc config focused_border_color    '#d9e0ee'
+bspc config active_border_color     '#f8bd96'
+bspc config focused_border_color    '#f8bd96'
 bspc config presel_feedback_color   '#abe9b3'
 
 # Window Config
