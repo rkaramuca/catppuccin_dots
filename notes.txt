@@ -9,6 +9,7 @@ Nautilus. Download lxappearance and you can customize gtk3 apps from there
 
 Data Drive:
 -----------
+Download udisks2 and ntfs-3g
 udisksctl mount -b /dev/<driveName>
 udisksctl unmount -b /dev/<driveName>
 OR
