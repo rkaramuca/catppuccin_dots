@@ -10,7 +10,7 @@ super + Return
 
 # rofi
 super + @space
-    rofi -show run -icon-theme "Papirus" -show-icons
+    rofi -show drun
 # firefox
 super + b
 	firefox
