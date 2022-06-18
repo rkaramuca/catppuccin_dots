@@ -79,6 +79,7 @@ Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 call plug#end()
 
 " Catppuccin Colorscheme
+let g:catppuccin_flavour = "mocha"
 colorscheme catppuccin
 
 " Plugin keybinds
