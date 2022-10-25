@@ -7,6 +7,8 @@ File manager:
 -------------
 Thunar. Download lxappearance and you can customize gtk3 apps from there
 Copy nvim.desktop to /usr/share/applications to get Thunar to open files with neovim.
+In Thunar, go to Edit -> Configure custom actions... -> Double click "Open Terminal here" ->
+Replace the "Command" line with "kitty" -> Click Ok
 
 System Theme:
 -------------
