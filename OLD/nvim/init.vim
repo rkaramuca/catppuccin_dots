@@ -60,7 +60,7 @@ set tabstop=4		    " set tabbing to be 4 spaces
 set shiftwidth=4        " more tabbing
 set expandtab           " more tabbing
 set wrap                " Automatically wrap text that extends beyond the
-" highlight LineNr ctermfg=lightBlue guifg=lightBlue
+highlight LineNr ctermfg=lightBlue guifg=lightBlue
 set signcolumn=no       " Remove ugly bar from left side 
 
 " Source a global configuration file if available
@@ -70,13 +70,31 @@ endif
 
 " Add vim-plug plugins here
 call plug#begin('~/.config/nvim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 call plug#end()
 
-" Catppuccin Color Scheme
+" Catppuccin Colorscheme
 let g:catppuccin_flavour = "mocha"
 colorscheme catppuccin
+
+" Plugin keybinds
+" Changing default NERDTree arrows
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+nnoremap <C-t> :NERDTreeToggle<CR>
+" COC binds
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
+nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+nmap <leader>do <Plug>(coc-codeaction)
+nmap <leader>rn <Plug>(coc-rename)
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-css', 'coc-eslint', 'coc-prettier', 'coc-pyright']

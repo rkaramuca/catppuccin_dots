@@ -4,27 +4,39 @@
 
 # terminal emulator
 super + Return
-	kitty
+    kitty
 
 # program launcher
+
+# rofi
 super + @space
     rofi -show drun
+# firefox
+super + b
+	firefox
+# discord
+super + d
+	discord
+# vscode
+super + v
+	code
+# spotify
+super + u
+    spotify
+# flameshot
+super + p
+    flameshot gui
 
 # make sxhkd reload its configuration files:
 super + Home
 	pkill -USR1 -x sxhkd
 
-#
-# programs
+# 
+# system hotkeys
 #
 
-# firefox
-super + b 
-    firefox
-
-#
 # audio control
-#
+# add function here
 XF86Audio{Raise,Lower}Volume
     pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
 
@@ -76,8 +88,8 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+#super + {p,b,comma,period}
+#	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
@@ -97,9 +109,17 @@ super + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
+#
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+#
+
+# give desktops 1,3,5 to main monitor
+super + {_,shift + }{1,3,5}
+    bspc {desktop -f,node -d} DP-1:^{1-3}
+
+# give desktops 2,4,6 to second monitor
+super + {_,shift + }{2,4,6}
+    bspc {desktop -f,node -d} HDMI-0:^{1-3}
 
 #
 # preselect
