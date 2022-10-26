@@ -106,5 +106,6 @@ source $ZSH/oh-my-zsh.sh
 alias vi=nvim
 alias python=python3
 
+export _JAVA_AWT_WM_NONREPARENTING=1
 export PATH=/home/ron/.local/bin:$PATH
 pfetch
