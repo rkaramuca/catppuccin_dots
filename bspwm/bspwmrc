@@ -10,6 +10,8 @@ nitrogen --restore &
 picom -m 1 -i 1 &
 xsetroot -cursor_name left_ptr
 
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+
 # colors
 bspc config normal_border_color     '#575268'
 bspc config active_border_color     '#f5c2e7'
