@@ -22,6 +22,22 @@ super + Home
 super + b 
     firefox
 
+# thunar
+super + shift + f
+    thunar
+
+# discord
+super + d
+    discord
+
+# spotify
+super + u 
+    spotify
+
+# flameshot
+super + shift + p
+    flameshot gui
+
 #
 # audio control
 #
