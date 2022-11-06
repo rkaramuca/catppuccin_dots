@@ -2,6 +2,7 @@ System Installs:
 ----------------
 We install neovim, vimplug, rofi, kitty, zsh, ohmyzsh, and 
 zsh-syntaxhighlighting/zsh-autosuggestions to setup our terminal.
+Install ttf-font-awesome and terminus-font for polybar. 
 
 File manager:
 -------------
